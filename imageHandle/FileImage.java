@@ -1,4 +1,4 @@
-package com.yt.kangaroo.libs.imageHandle;
+package net.wt.gate.dev.util.imageHandle;
 
 import java.io.File;
 
@@ -37,7 +37,7 @@ public class FileImage {
     }
 
     public void build(){
-        if (mInpFile == null || mOutFile ==null){
+        if (mInpFile == null || mOutFile == null){
             if (mFileImageHandleListener != null){
                 mFileImageHandleListener.onFailure("inpFile and outFile is null");
             }

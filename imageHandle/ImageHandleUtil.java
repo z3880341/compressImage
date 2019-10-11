@@ -1,11 +1,9 @@
-package com.yt.kangaroo.libs.imageHandle;
+package net.wt.gate.dev.util.imageHandle;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
 import android.media.ExifInterface;
-
-import com.yt.kangaroo.utils.L;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -36,8 +34,8 @@ public class ImageHandleUtil {
             onFailure("inpFile not exists ");
             return;
         }
-        if (!new File(fileImage.mOutFile.getPath()).exists()){
-            onFailure("outFile not exists ");
+        if (!fileImage.mOutFile.getParentFile().isDirectory()){
+            onFailure("outFile Directory not exists ");
             return;
 
         }
@@ -166,15 +164,7 @@ public class ImageHandleUtil {
         } catch (IOException e) {
             e.printStackTrace();
             onError(e);
-        } finally {
-            try {
-                fileOutputStream.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
         }
-
-
     }
 
     /**

@@ -1,16 +1,12 @@
-package com.yt.kangaroo.libs.imageHandle;
+package net.wt.gate.dev.util.imageHandle;
 
 import android.graphics.Bitmap;
+import android.support.annotation.NonNull;
 
 import java.io.File;
 import java.util.List;
 
-import androidx.annotation.NonNull;
-
 public class ImageHandle {
-    private FileImage mFileImage;
-    private BitmapImage mBitmapImage;
-
     /**
      * 文件图片形式压缩
      * @param inpFile 传入的图片

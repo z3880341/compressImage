@@ -1,4 +1,4 @@
-package com.yt.kangaroo.libs.imageHandle;
+package net.wt.gate.dev.util.imageHandle;
 
 import android.graphics.Bitmap;
 
